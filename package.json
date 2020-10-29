@@ -1,0 +1,19 @@
+{
+  "name": "marble-error",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "sever:run": "npm run build && node ."
+  },
+  "devDependencies": {
+    "@types/node": "12",
+    "typescript": "3",
+    "@marblejs/core": "3",
+    "@marblejs/middleware-logger": "3",
+    "@marblejs/middleware-body": "3",
+    "fp-ts": "2",
+    "rxjs": "6"
+  },
+  "dependencies": {}
+}

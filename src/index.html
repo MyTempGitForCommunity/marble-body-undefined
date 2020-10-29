@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<button onclick="sendDataToServer()">Send Data To Server</button>
+
+<script>
+
+  const sendDataToServer = () =>
+    fetch('/long-answer', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8', //'application/json;charset=utf-8',
+      },
+      body: `is body exist?`
+    })
+      .then(response => response.text())
+      .then(body => console.log(`body:`, body))
+      .catch(e => console.error(`fetch`, e))
+
+</script>
+</body>
+</html>
